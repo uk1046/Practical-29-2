@@ -42,8 +42,6 @@ public class MainActivity extends AppCompatActivity {
                             SmsMessage smsMessage = SmsMessage.createFromPdu((byte[]) pdu, bundle.getString("format"));
                             String sender = smsMessage.getDisplayOriginatingAddress();
                             String message = smsMessage.getDisplayMessageBody();
-
-                            // Display sender and message in TextViews
                             senderTextView.setText("From: " + sender);
                             receivedMessageTextView.setText("Message: " + message);
                         }
